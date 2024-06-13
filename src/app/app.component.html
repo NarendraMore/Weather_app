@@ -1,0 +1,55 @@
+<div class="container" *ngIf="wetherData">
+  <div class="upperdata">
+    <img src="assets/images/hotw.jpg" *ngIf="wetherData.minTempCelsius">
+    <img src="assets/images/cold.jpg" >
+    <div class="whetherData">
+      <div class="location">{{wetherData1.name}}</div>
+      <div class="temprature">{{wetherData[0].maxTempCelsius}}°C</div>
+    </div>
+  </div>
+  <div class="lowerData">
+    <div class="more-info-lable">
+      More Infirmation
+    </div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="assets/images/min.png"><br>
+          <span>Min</span>
+        </div>
+        <div class="info-block-value">
+          {{wetherData[0].minTempCelsius}}°C
+        </div>  
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="assets/images/max.png"><br>
+          <span>Max</span>
+        </div>
+        <div class="info-block-value">
+          {{wetherData[0].maxTempCelsius}}°C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="assets/images/humidity.png"><br>
+          <span>Humidity</span>
+        </div>
+        <div class="info-block-value">
+          {{wetherData[0].maxTempFarenheit}}%
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="assets/images/wind.webp"><br>
+          <span>Wind</span>
+        </div>
+        <div class="info-block-value">
+          {{wetherData[0].
+            windAverageKmh}}km/r
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
